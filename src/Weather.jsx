@@ -8,7 +8,7 @@ const Weather=()=>{
 
     //<=====Function for weather API========>
      const fetchApi= async ()=>{
-            const url=`http://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=bd8184da268988bea575aff8abcbdf3b`
+            const url=`https://api.openweathermap.org/data/2.5/weather?q=${search}&units=metric&appid=bd8184da268988bea575aff8abcbdf3b`
             const response = await fetch(url);
             const resjson= await response.json();
             setCity(resjson);
