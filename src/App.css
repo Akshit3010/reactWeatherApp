@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;500&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-color: #f3f2ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 25vw;
+    height: 60vh;
+    border-radius: 0.5rem;
+    background: #a5bbdd;
+    box-shadow: 0 0.2rem 3rem rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    min-width: 20rem;
+    min-height: 35rem;
+    transform: translate3d(0, 0, 0);
+    ;
+}
+
+.wave {
+    opacity: 0.1;
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    background: white;
+    width: 50rem;
+    height: 50rem;
+    margin-left: -25rem;
+    margin-top: -20rem;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms infinite linear;
+    z-index: -1;
+}
+
+.one {
+    animation: drift 4000ms infinite linear;
+    opacity: 0.2;
+    z-index: 1!important;
+}
+
+.two {
+    animation: drift 5000ms infinite linear;
+    opacity: 0.3;
+    z-index: 3!important;
+}
+
+.three {
+    animation: drift 6000ms infinite linear;
+    opacity: 0.4;
+    z-index: 3!important;
+}
+
+.inputData {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.inputField {
+    height: 2rem;
+    width: 60%;
+    outline: none;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    font-size: 1rem;
+    padding: 0.8rem;
+}
+
+.head {
+    display: grid;
+    place-items: center;
+    margin-top: 5rem;
+}
+
+.wi {
+    color: white;
+    font-size: 5rem;
+    animation: scale 2s ease-in-out infinite alternate-reverse both;
+}
+
+.main {
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.location {
+    text-align: center;
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    padding: 1rem;
+    z-index: 99999;
+}
+
+.temp {
+    padding-top: 1rem;
+    z-index: 99999;
+}
+
+.min_max {
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding-top: 0.4rem;
+    z-index: 9999;
+}
+
+.time {
+    z-index: 9999;
+    font-size: 1.2rem;
+    padding-top: 0.4rem;
+    font-weight: 300;
+}
+
+.btn {
+    outline: none;
+    font-size: 1rem;
+    width: 4rem;
+    height: 2rem;
+    border-radius: 1rem;
+    margin-left: 0.4rem;
+    border: transparent;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    width: 5rem;
+}
+
+.location {
+    animation: move 2s ease-in-out infinite alternate-reverse both;
+}
+
+.fa-location-arrow {
+    animation: animate 2s ease-in-out infinite alternate-reverse both;
+}
+
+.error {
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 1.6rem;
+}
+
+@keyframes drift {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(-10px)
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate3d(0, 1, 0.5, 3.142rad);
+    }
+    100% {
+        transform: rotate3d(0);
+    }
+}
